@@ -9,8 +9,8 @@ class Weapon extends Model
 {
     use HasFactory;
 
-    // public function heroes()
-    // {
-    //     $this->belongsToMany(Hero::class);
-    // }
+    public function heroes()
+    {
+        $this->belongsToMany(Hero::class);
+    }
 }
