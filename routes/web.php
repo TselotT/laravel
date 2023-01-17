@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\HeroController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\WeaponController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -24,6 +26,9 @@ Route::get('/', function () {
         'phpVersion' => PHP_VERSION,
     ]);
 });
+
+Route::get('/heroes',[HeroController::class,"getDamage"]);
+Route::get('/weapons',[WeaponController::class,"index"]);
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

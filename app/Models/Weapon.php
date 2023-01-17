@@ -11,6 +11,6 @@ class Weapon extends Model
 
     public function heroes()
     {
-        $this->belongsToMany(Hero::class);
+        return $this->belongsToMany(Hero::class);
     }
 }
