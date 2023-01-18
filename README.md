@@ -1,4 +1,3 @@
-
 ## Setup the project
 
 - Clone the project with the below command
@@ -15,13 +14,16 @@
   php artisan serve
   ```
 - Configure db configuration inside .env file
+- Add mail configuration and change `QUEUE_CONNECTION` to `database` for mail queuing
 - Import dummy_data.sql to mysql
 - Then run the command bellow to install Voyager
 
   ```
   php artisan voyager:install
   ```
-- Open
+- Also run `php artisan queue:work` inorder for the jobs gets processed
+
+  Finally open
 
   ```
   localhost:8000
