@@ -1,11 +1,12 @@
 import { Link, Head } from "@inertiajs/inertia-react";
 import Table from "react-bootstrap/Table";
 export default function Weapon(props) {
-    console.log(props);
     const { weapons } = props
+    let no = 0
     return (
         <>
             <h1 className="text-center my-6">List of Weapons</h1>
+            <h4 className="text-center"><Link className="btn btn-primary" href="/heroes">Go to heroes page</Link></h4>
             <Table className="mx-3" striped bordered hover>
                 <thead>
                     <tr>
@@ -19,7 +20,7 @@ export default function Weapon(props) {
                 <tbody>
                     {weapons && weapons.map((weapon,i) => (
                         <tr key={weapon.id}>
-                            <td>{weapon.id}</td>
+                            <td>{++no}</td>
                             <td>{weapon.name}</td>
                             <td>{weapon.damage}</td>
                             <td>{weapon.is_range}</td>
